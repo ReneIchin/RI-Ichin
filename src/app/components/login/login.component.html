@@ -1,1 +1,55 @@
-<p>Este es el Login</p>
+<section class="bg-light d-flex align-items-center justify-content-center vh-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-center mb-4">Login</h5>
+            <form action="" class="row">
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                  <input type="password" class="form-control" id="password">
+                  <span class="input-group-text" id="togglePassword">
+                    <i class="fa fa-eye-slash" id="togglePasswordIcon"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="mb-3 text-center">
+                <button type="button" class="btn btn-outline-success">Ingresar <i class="fa fa-sign-in"></i></button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  document.getElementById('togglePassword').addEventListener('click', function (e) {
+    const password = document.getElementById('password');
+    const passwordIcon = document.getElementById('togglePasswordIcon');
+    // Toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // Toggle the icon
+    if (type === 'password') {
+      passwordIcon.classList.remove('bi-eye');
+      passwordIcon.classList.add('bi-eye-slash');
+    } else {
+      passwordIcon.classList.remove('bi-eye-slash');
+      passwordIcon.classList.add('bi-eye');
+    }
+  });
+</script>

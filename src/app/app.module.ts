@@ -12,6 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { CreateCategoriaComponent } from './components/create-categoria/create-categoria.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { CreateProductoComponent } from './components/create-producto/create-producto.component';
+import { CompraComponent } from './components/compra/compra.component';
+import { CreateCompraComponent } from './components/create-compra/create-compra.component';
+import { VentaComponent } from './components/venta/venta.component';
+import { CreateVentaComponent } from './components/create-venta/create-venta.component';
 
 const routes: Routes  = [
   { path: 'login', component: LoginComponent },
@@ -20,7 +25,13 @@ const routes: Routes  = [
   {path:'route', component: AppComponent},
   {path:'categoria', component: CategoriaComponent},
   {path:'createCategoria', component: CreateCategoriaComponent},
-  {path:'producto', component: ProductoComponent}
+  {path:'producto', component: ProductoComponent},
+  {path:'createProducto', component: CreateProductoComponent},
+  {path:'compra', component: CompraComponent},
+  {path:'createCompra', component: CreateCompraComponent},
+  {path:'venta', component: VentaComponent},
+  {path:'createVenta', component: CreateVentaComponent},
+
 ];
 
 @NgModule({
@@ -31,7 +42,12 @@ const routes: Routes  = [
     HomeComponent,
     CategoriaComponent,
     CreateCategoriaComponent,
-    ProductoComponent
+    ProductoComponent,
+    CreateProductoComponent,
+    CompraComponent,
+    CreateCompraComponent,
+    VentaComponent,
+    CreateVentaComponent
   ],
   imports: [
     BrowserModule,
